@@ -1,0 +1,27 @@
+{
+  "name": "erc1155token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manasamahesh/ERC1155Token.git"
+  },
+  "author": "manasa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manasamahesh/ERC1155Token/issues"
+  },
+  "homepage": "https://github.com/Manasamahesh/ERC1155Token#readme",
+  "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contracts": "^4.4.2",
+    "truffle": "^5.4.30"
+  }
+}
