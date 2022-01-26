@@ -1,13 +1,10 @@
-// contracts/MarketPlace.sol
-// SPDX-License-Identifier: MIT
-
 pragma solidity ^0.8.0;
 import "../node_modules/@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 import "../node_modules/@openzeppelin/contracts/utils/Strings.sol";
-import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
+import "../node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol";
 
-contract MarketPlace is ERC1155,Ownable {
+contract ERC1155MarketPlace is ERC1155,Ownable {
     struct TokenRoyaltyDetials {
         address payable recipient;
         uint256 tokenName;
@@ -24,7 +21,7 @@ contract MarketPlace is ERC1155,Ownable {
     
     event Platformfee(address payable miner, uint256 calculateplatformfees);
     event Royaltyfee(address payable royaltiesrecipient, uint256 royaltyAmount);
-    constructor() public ERC1155("https://bafybeicvss3qiexx4srl7junjd3auqrs4gsz5mtgolxofjae2dxwdu2iam.ipfs.dweb.link/{tokenId}.json") {
+    constructor() ERC1155 ("https://bafybeicvss3qiexx4srl7junjd3auqrs4gsz5mtgolxofjae2dxwdu2iam.ipfs.dweb.link/{tokenId}.json") {
         _mintForFungileToken(FungileToken, 10**18);
         _mint(msg.sender,skypicture,2000,"");
         _mint(msg.sender,sunlightDeviation,1000,"");
